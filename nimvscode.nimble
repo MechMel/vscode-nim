@@ -48,7 +48,7 @@ task upgrade_node_deps, "Upgrade Node.js dependencies":
   echo "NOTE: 'engines' versions in 'package.json' need manually upgraded"
 
 # Tasks for publishing the extension
-task extReleasePatch, "Patch release on vscode marketplace and openvsx registry":
-  initialNpmInstall()
-  exec "npm exec -c 'vsce publish patch'" # this bumps the version number
-  exec "npm exec -c 'ovsx publish " & out"/"nimvscode-" & version & ".vsix & "'"
+#task extReleasePatch, "Patch release on vscode marketplace and openvsx registry":
+#  initialNpmInstall()
+#  exec "npm exec -c 'vsce publish patch'" # this bumps the version number
+#  exec "npm exec -c 'ovsx publish " & out"/"nimvscode-" & version & ".vsix & "'"

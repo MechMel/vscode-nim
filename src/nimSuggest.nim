@@ -59,6 +59,8 @@ proc provideCompletionItems*(
     let `range` = doc.getWordRangeAtPosition(position)
     var txt: cstring = if `range`.isNil(): nil else: doc.getText(`range`).toLowerAscii()
     let line = doc.lineAt(position).text
+
+    # Import statement suggestions are not handled through nimsuggest
     if line.startsWith("import "):
       var txtPart: cstring
       if txt.toJs().to(bool) and `range`.toJs().to(bool):
@@ -68,6 +70,8 @@ proc provideCompletionItems*(
       resolve(getImports(
         txtPart,
         getProjectFileInfo(filename).wsFolder.uri.fsPath))
+
+    # We use nimsuggest to perform code completion suggestions
     else:
       let startPos: cint = position.line + 1
       nimSuggestExec.execNimSuggest(

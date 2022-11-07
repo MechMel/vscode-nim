@@ -157,6 +157,21 @@
       "name": "keyword.boolean.nim"
     },
     {
+      "comment": "Mel: struct keyword",
+      "match": "\\b(struct)\\b",
+      "name": "keyword.other.nim"
+    },
+    {
+      "comment": "Mel: Init opertaor",
+      "match": ":=",
+      "name": "keyword.other.nim"
+    },
+    {
+      "comment": "Mel: Return opertaor",
+      "match": "=>",
+      "name": "keyword.control.nim"
+    },
+    {
       "comment": "Generic operators for expressions.",
       "match": "(=|\\+|-|\\*|/|<|>|@|\\$|~|&|%|!|\\?|\\^|\\.|:|\\\\)+",
       "name": "keyword.operator.nim"

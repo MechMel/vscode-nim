@@ -1,5 +1,9 @@
 # Nim Extension
 
+## Fixes
+Added the nimsuggest folder inside src this seemed to fix some wierd import bug.
+
+## Nim Extension
 Visual Studio:
 [![Version](https://vsmarketplacebadge.apphb.com/version/nimsaem.nimvscode.svg)](https://marketplace.visualstudio.com/items?itemName=nimsaem.nimvscode)
 [![Installs](https://vsmarketplacebadge.apphb.com/installs/nimsaem.nimvscode.svg)](https://marketplace.visualstudio.com/items?itemName=nimsaem.nimvscode)

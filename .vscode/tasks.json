@@ -6,7 +6,7 @@
         {
             "label": "nimble build",
             "command": "nimble",
-            "args": ["main"],
+            "args": ["main", "--verbose"],
             "options": { "cwd": "${workspaceRoot}" },
             "type": "shell",
             "group": {

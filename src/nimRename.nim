@@ -14,12 +14,11 @@ proc provideRenameEdits*(
       resolve: proc(val: VscodeWorkspaceEdit), reject: proc(reason: JsObject)
     ) =
     vscode.workspace.saveAll(false).then(proc () =
-      let pos: cint = position.line + 1
       execNimSuggest(
         NimSuggestType.use,
         doc.fileName,
-        pos,
-        position.character,
+        line = position.line + 1,
+        column = position.character,
         true,
         doc.getText()
       ).then(proc (suggestions: seq[NimSuggestResult]) =
