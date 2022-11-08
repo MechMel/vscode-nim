@@ -184,13 +184,15 @@ proc parseErrors(lines: seq[cstring]): seq[CheckResult] =
 proc parseNimsuggestErrors(items: seq[NimSuggestResult]): seq[CheckResult] =
   var ret: seq[CheckResult] = @[]
   for item in items.filterIt(not (it.path == "???" and it.`type` == "Hint")):
-    ret.add(CheckResult{
-        file: item.path,
-        line: item.line,
-        column: item.column,
-        msg: item.documentation,
-        severity: item.`type`
-    })
+    # Part 1/2: This should filter out term-rewritng macro warnings since I don't like those.
+    if not item.documentation.endsWith("[Pattern]"):
+      ret.add(CheckResult{
+          file: item.path,
+          line: item.line,
+          column: item.column,
+          msg: item.documentation,
+          severity: item.`type`
+      })
 
   console.log("parseNimsuggestErrors - return", ret)
   return ret
@@ -228,7 +230,10 @@ proc check*(filename: cstring, nimConfig: VscodeWorkspaceConfiguration): Promise
   return all(runningToolsPromises)
     .then(proc(resultSets: seq[seq[CheckResult]]): seq[CheckResult] =
       for rs in resultSets:
-        result.add(rs)
+        for r in rs:
+          # Part 2/2: This should filter out term-rewritng macro warnings since I don't like those.
+          if (not r.msg.endsWith("[Pattern]")):
+            result.add(r)
   ).catch(proc(r: JsObject): Promise[seq[CheckResult]] =
     console.error("check - all - failed", r)
     promiseReject(r).toJs().to(Promise[seq[CheckResult]])
