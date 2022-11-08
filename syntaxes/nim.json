@@ -162,6 +162,11 @@
       "name": "keyword.other.nim"
     },
     {
+      "comment": "Mel: Mutator opertaor",
+      "match": "\\b(mutator)\\b",
+      "name": "keyword.other.nim"
+    },
+    {
       "comment": "Mel: Init opertaor",
       "match": ":=",
       "name": "keyword.other.nim"
