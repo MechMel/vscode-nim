@@ -162,8 +162,18 @@
       "name": "keyword.other.nim"
     },
     {
-      "comment": "Mel: Mutator opertaor",
+      "comment": "Mel: Sync level keywords",
+      "match": "\\b(cloud|device|session)\\b",
+      "name": "keyword.other.nim"
+    },
+    {
+      "comment": "Mel: Function keywords",
       "match": "\\b(mutator|function|computed|computator)\\b",
+      "name": "keyword.other.nim"
+    },
+    {
+      "comment": "Mel: Experimental keywords",
+      "match": "\\b(t)\\b",
       "name": "keyword.other.nim"
     },
     {
