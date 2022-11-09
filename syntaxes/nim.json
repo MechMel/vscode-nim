@@ -163,7 +163,7 @@
     },
     {
       "comment": "Mel: Mutator opertaor",
-      "match": "\\b(mutator)\\b",
+      "match": "\\b(mutator|function|computed|computator)\\b",
       "name": "keyword.other.nim"
     },
     {
