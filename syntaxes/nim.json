@@ -157,8 +157,8 @@
       "name": "keyword.boolean.nim"
     },
     {
-      "comment": "Mel: struct keyword",
-      "match": "\\b(struct)\\b",
+      "comment": "Mel: type keyword",
+      "match": "\\b(model)\\b",
       "name": "keyword.other.nim"
     },
     {
@@ -168,7 +168,7 @@
     },
     {
       "comment": "Mel: Function keywords",
-      "match": "\\b(mutator|function|computed|computator)\\b",
+      "match": "\\b(action|formula|function)\\b",
       "name": "keyword.other.nim"
     },
     {
