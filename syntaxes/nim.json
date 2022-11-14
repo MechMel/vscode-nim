@@ -158,7 +158,7 @@
     },
     {
       "comment": "Mel: type keyword",
-      "match": "\\b(shared|ext|on|add|lit|model|this|to)\\b",
+      "match": "\\b(shared|ext|on|lit|model|this|to)\\b",
       "name": "keyword.other.nim"
     },
     {
