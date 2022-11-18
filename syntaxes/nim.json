@@ -172,18 +172,18 @@
       "name": "keyword.other.nim"
     },
     {
-      "comment": "Mel: Experimental keywords",
-      "match": "\\b(t)\\b",
-      "name": "keyword.other.nim"
-    },
-    {
       "comment": "Mel: Init opertaor",
       "match": ":=",
       "name": "keyword.other.nim"
     },
     {
-      "comment": "Mel: Return opertaor",
+      "comment": "Mel: Formula opertaor",
       "match": "=>",
+      "name": "keyword.control.nim"
+    },
+    {
+      "comment": "Mel: control opertaors",
+      "match": " (\\?|\\\\) ",
       "name": "keyword.control.nim"
     },
     {
