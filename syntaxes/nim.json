@@ -187,6 +187,11 @@
       "name": "keyword.control.nim"
     },
     {
+      "comment": "Mel: Control keywords",
+      "match": "\\b(ifel)\\b",
+      "name": "keyword.control.nim"
+    },
+    {
       "comment": "Generic operators for expressions.",
       "match": "(=|\\+|-|\\*|/|<|>|@|\\$|~|&|%|!|\\?|\\^|\\.|:|\\\\)+",
       "name": "keyword.operator.nim"
