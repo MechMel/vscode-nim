@@ -163,7 +163,7 @@
     },
     {
       "comment": "Mel: Sync level keywords",
-      "match": "\\b(cloud|device|session)\\b",
+      "match": "\\b(c|d|s|g|cloud|device|session|global)\\b",
       "name": "keyword.other.nim"
     },
     {
