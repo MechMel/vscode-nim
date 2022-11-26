@@ -188,7 +188,7 @@
     },
     {
       "comment": "Mel: Control keywords",
-      "match": "\\b(ifel)\\b",
+      "match": "\\b(ifel|result)\\b",
       "name": "keyword.control.nim"
     },
     {
