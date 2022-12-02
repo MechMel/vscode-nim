@@ -158,7 +158,7 @@
     },
     {
       "comment": "Mel: type keyword",
-      "match": "\\b(shared|ext|on|lit|model|this|cfrom|to|oneOf)\\b",
+      "match": "\\b(shared|ext|on|lit|model|ctype|this|cfrom|to|oneOf)\\b",
       "name": "keyword.other.nim"
     },
     {
@@ -188,7 +188,7 @@
     },
     {
       "comment": "Mel: Control keywords",
-      "match": "\\b(ifel|result)\\b",
+      "match": "\\b(ifel|result|map)\\b",
       "name": "keyword.control.nim"
     },
     {
